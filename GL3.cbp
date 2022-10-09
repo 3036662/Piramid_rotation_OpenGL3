@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GL3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/GL3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="../GL3" />
+				</Compiler>
+				<Linker>
+					<Add option="-lglfw3 -ldl -lX11 -lpthread -lm -lXrandr -lXi" />
+					<Add library="libglfw3.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/GL3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="../GL3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lglfw3 -ldl -lX11 -lpthread -lm -lXrandr -lXi" />
+					<Add library="libglfw3.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="include" />
+		</Compiler>
+		<Unit filename="constants.h" />
+		<Unit filename="gl_utils.cpp" />
+		<Unit filename="gl_utils.h" />
+		<Unit filename="glad.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="include/Shader.h" />
+		<Unit filename="include/VertexArrayObject.h" />
+		<Unit filename="include/VertexBuffer.hpp" />
+		<Unit filename="include/font_arial.hpp" />
+		<Unit filename="include/imgui/imgui.cpp" />
+		<Unit filename="include/imgui/imgui_draw.cpp" />
+		<Unit filename="include/imgui/imgui_impl_glfw.cpp" />
+		<Unit filename="include/imgui/imgui_impl_opengl3.cpp" />
+		<Unit filename="include/imgui/imgui_tables.cpp" />
+		<Unit filename="include/imgui/imgui_widgets.cpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="shaders.h" />
+		<Unit filename="src/Shader.cpp" />
+		<Unit filename="src/VertexArrayObject.cpp" />
+		<Unit filename="src/VertexBuffer.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
